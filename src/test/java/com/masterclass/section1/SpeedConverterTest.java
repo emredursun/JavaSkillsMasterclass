@@ -1,56 +1,63 @@
 package com.masterclass.section1;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 public class SpeedConverterTest {
 
-    @Test
-    public void testToMilesPerHour_Negative() {
-        assertEquals(-1, SpeedConverter.toMilesPerHour(-5.0));
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    private final PrintStream originalOut = System.out;
+
+    @BeforeEach
+    public void setUpStreams() {
+        System.setOut(new PrintStream(outContent));
+    }
+
+    @AfterEach
+    public void restoreStreams() {
+        System.setOut(originalOut);
     }
 
     @Test
-    public void testToMilesPerHour_Zero() {
-        assertEquals(0, SpeedConverter.toMilesPerHour(0.0));
+    public void testToMilesPerHour_NegativeValue() {
+        assertEquals(-1, SpeedConverter.toMilesPerHour(-5));
     }
 
     @Test
-    public void testToMilesPerHour_Positive() {
+    public void testToMilesPerHour_ZeroValue() {
+        assertEquals(0, SpeedConverter.toMilesPerHour(0));
+    }
+
+    @Test
+    public void testToMilesPerHour_PositiveValue() {
         assertEquals(1, SpeedConverter.toMilesPerHour(1.609));
-        assertEquals(62, SpeedConverter.toMilesPerHour(100.0));
+        assertEquals(62, SpeedConverter.toMilesPerHour(100));
     }
 
     @Test
-    public void testPrintConversion_Negative() {
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outContent));
-        SpeedConverter.printConversion(-5.0);
-        assertEquals("Invalid Value\n", outContent.toString());
-        System.setOut(null); // Reset the standard output
+    public void testPrintConversion_NegativeValue() {
+        SpeedConverter.printConversion(-5);
+        assertEquals("Invalid Value" + System.lineSeparator(), outContent.toString());
     }
 
     @Test
-    public void testPrintConversion_Zero() {
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outContent));
-        SpeedConverter.printConversion(0.0);
-        assertEquals("0.0 km/h = 0 mi/h\n", outContent.toString());
-        System.setOut(null); // Reset the standard output
+    public void testPrintConversion_ZeroValue() {
+        SpeedConverter.printConversion(0);
+        assertEquals("0.0 km/h = 0 mi/h" + System.lineSeparator(), outContent.toString());
     }
 
     @Test
-    public void testPrintConversion_Positive() {
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outContent));
+    public void testPrintConversion_PositiveValue() {
         SpeedConverter.printConversion(1.609);
-        assertEquals("1.609 km/h = 1 mi/h\n", outContent.toString());
+        assertEquals("1.609 km/h = 1 mi/h" + System.lineSeparator(), outContent.toString());
 
         outContent.reset();
-        SpeedConverter.printConversion(100.0);
-        assertEquals("100.0 km/h = 62 mi/h\n", outContent.toString());
-        System.setOut(null); // Reset the standard output
+        SpeedConverter.printConversion(100);
+        assertEquals("100.0 km/h = 62 mi/h" + System.lineSeparator(), outContent.toString());
     }
 }
