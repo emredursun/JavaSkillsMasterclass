@@ -23,6 +23,9 @@ public class SpeedConverterTest {
         System.setOut(originalOut);
     }
 
+    /**
+     * Test testToMilesPerHour Method
+     */
     @Test
     public void testToMilesPerHour_NegativeValue() {
         assertEquals(-1, SpeedConverter.toMilesPerHour(-5));
@@ -39,6 +42,9 @@ public class SpeedConverterTest {
         assertEquals(62, SpeedConverter.toMilesPerHour(100));
     }
 
+    /**
+     * Test printConversion() Method
+     */
     @Test
     public void testPrintConversion_NegativeValue() {
         SpeedConverter.printConversion(-5);
