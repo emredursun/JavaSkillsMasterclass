@@ -25,6 +25,6 @@ public class MeasurementConverterTest {
         assertEquals(30.48, MeasurementConverter.convertToCentimeters(0, 12), 0.01);
         assertEquals(0.0, MeasurementConverter.convertToCentimeters(0, 0), 0.01);
         assertEquals(2.54, MeasurementConverter.convertToCentimeters(0, 1), 0.01);
-        assertEquals(243.84, MeasurementConverter.convertToCentimeters(8, 0), 0.01);
+        assertEquals(246.38, MeasurementConverter.convertToCentimeters(8, 1), 0.01);
     }
 }
