@@ -1,4 +1,4 @@
-package com.masterclass.section1;
+package com.masterclass.section_01;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

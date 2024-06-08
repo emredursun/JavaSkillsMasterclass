@@ -1,4 +1,4 @@
-package com.masterclass.section1;
+package com.masterclass.section_01;
 
 public class GameChallenge {
     public static void main(String[] args) {

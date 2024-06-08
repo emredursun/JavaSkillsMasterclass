@@ -1,4 +1,4 @@
-package com.masterclass.section1;
+package com.masterclass.section_01;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.io.ByteArrayOutputStream;
