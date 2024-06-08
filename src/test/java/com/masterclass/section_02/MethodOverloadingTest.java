@@ -1,5 +1,6 @@
-package com.masterclass.section_01;
+package com.masterclass.section_02;
 
+import com.masterclass.section_02.MethodOverloading;
 import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;

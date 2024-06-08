@@ -1,4 +1,5 @@
-package com.masterclass.section_01;
+package com.masterclass.section_02;
+import com.masterclass.section_02.MeasurementConverter;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

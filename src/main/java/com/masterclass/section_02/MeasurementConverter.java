@@ -1,4 +1,4 @@
-package com.masterclass.section_01;
+package com.masterclass.section_02;
 
 public class MeasurementConverter {
 
