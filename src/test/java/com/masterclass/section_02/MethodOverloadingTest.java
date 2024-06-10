@@ -1,10 +1,12 @@
 package com.masterclass.section_02;
 
-import com.masterclass.section_02.MethodOverloading;
 import org.junit.jupiter.api.Test;
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class MethodOverloadingTest {
 

@@ -1,7 +1,8 @@
 package com.masterclass.section_02;
-import com.masterclass.section_02.TimeConverter;
+
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TimeConverterTest {
 
