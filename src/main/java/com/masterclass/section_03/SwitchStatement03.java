@@ -18,7 +18,7 @@ public class SwitchStatement03 {
 
     public static void printDayOfWeek(int numOfDay) {
         String dayOfWeek = switch (numOfDay) {
-            case 0 -> "Sunday";
+            case 0 -> { yield  "Sunday";}
             case 1 -> "Monday";
             case 2 -> "Tuesday";
             case 3 -> "Wednesday";
