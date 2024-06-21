@@ -4,23 +4,29 @@ public class SwitchStatement03 {
 
     public static void main(String[] args) {
 
-        int numOfDay = 0;
-        printDayOfWeek(numOfDay);
-        numOfDay = 7;
-        printDayOfWeek(numOfDay);
+        printDayOfWeek(0);
+        printDayOfWeek(1);
+        printDayOfWeek(2);
+        printDayOfWeek(3);
+        printDayOfWeek(4);
+        printDayOfWeek(5);
+        printDayOfWeek(6);
+        printDayOfWeek(7);
+
 
     }
 
     public static void printDayOfWeek(int numOfDay) {
-        switch (numOfDay) {
-            case 1 -> System.out.println("Monday");
-            case 2 -> System.out.println("Tuesday");
-            case 3 -> System.out.println("Wednesday");
-            case 4 -> System.out.println("Thursday");
-            case 5 -> System.out.println("Friday");
-            case 6 -> System.out.println("Saturday");
-            case 7 -> System.out.println("Sunday");
-            default -> System.out.println("Invalid day of week");
-        }
+        String dayOfWeek = switch (numOfDay) {
+            case 0 -> "Sunday";
+            case 1 -> "Monday";
+            case 2 -> "Tuesday";
+            case 3 -> "Wednesday";
+            case 4 -> "Thursday";
+            case 5 -> "Friday";
+            case 6 -> "Saturday";
+            default -> "Invalid Day";
+        };
+        System.out.println(numOfDay + " stands for " + dayOfWeek);
     }
 }
