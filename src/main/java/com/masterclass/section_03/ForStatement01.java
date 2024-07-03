@@ -1,6 +1,6 @@
 package com.masterclass.section_03;
 
-public class ForStatement {
+public class ForStatement01 {
 
     public static void main(String[] args) {
 
