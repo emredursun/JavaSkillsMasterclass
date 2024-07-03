@@ -1,6 +1,6 @@
 package com.masterclass.section_03;
 
-public class NumberOfDaysInMonth {
+public class SwitchStatement04 {
 
     public static int getDaysInMonth(int month, int year) {
 
